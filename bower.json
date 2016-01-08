@@ -2,7 +2,8 @@
   "name": "wikiviewer",
   "private": true,
   "dependencies": {
-    "modernizr": "~2.8.1"
+    "modernizr": "~2.8.1",
+    "foundation-sites": "~6.1.1"
   },
   "devDependencies": {
     "chai": "~3.4.2",
