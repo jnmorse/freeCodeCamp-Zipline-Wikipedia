@@ -14,6 +14,8 @@
     <!-- endbower -->
     <!-- endbuild -->
 
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
     <!-- build:css styles/main.css -->
     <link rel="stylesheet" href="styles/main.css">
     <!-- endbuild -->
@@ -27,18 +29,27 @@
       <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
 
-    <header class="page-header row align-center">
-      <h1 class="small-5 medium-5 large-3 columns">WikiViewer</h1>
+    <header class="page-header">
+      <h1 class="small-5 medium-5 large-3 columns">WikiSearch</h1>
     </header>
 
-    <form class="wiki-search row align-center">
-      <div class="input-group small-12 medium-6 columns">
+    <form method="get" action="index.html" class="wiki-search">
+      <div class="input-group">
         <label for="wiki-search" class="input-group-label">Search</label>
+
         <input type="search" list="results" name="wikisearch" id="wiki-search" class="input-group-field">
-        <datalist id="results"></datalist>
-        <div class="input-group-button"><button class="button" type="submit"><i class="fa fa-search fa-fw"></i></button></div>
+
+        <div class="input-group-button">
+          <button class="button" type="submit" disabled><i class="fa fa-search fa-fw"></i></button>
+        </div>
+
+        <div class="input-group-button">
+          <button id="wiki-random" class="button" type="button"><i class="fa fa-random fa-fw"></i></button>
+        </div>
       </div>
     </form>
+
+    <div class="wiki-content"></div>
 
     <!-- build:js scripts/vendor.js -->
     <!-- bower:js -->

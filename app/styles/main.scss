@@ -1,6 +1,29 @@
 // bower:scss
 @import "bower_components/foundation-sites/scss/foundation.scss";
-@import "bower_components/components-font-awesome/scss/font-awesome.scss";
+// @import "bower_components/components-font-awesome/scss/font-awesome.scss";
 // endbower
 
-@include foundation-everything(true);
+// @include foundation-everything(true);
+
+@include foundation-global-styles;
+@include foundation-typography;
+@include foundation-forms;
+@include foundation-button;
+
+.page-header,
+.wiki-search,
+.wiki-content {
+  @include flex-grid-row();
+}
+
+.wiki-search,
+.wiki-content,
+.page-header {
+  @media #{$small-only} {
+    @include flex-grid-column(12);
+  }
+
+  @media #{$medium-up} {
+    @include flex-grid-column(8);
+  }
+}
